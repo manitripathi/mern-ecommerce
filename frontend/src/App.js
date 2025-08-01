@@ -4,11 +4,13 @@ import { CartProvider } from "./CartContext";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import CartPage from "./pages/CartPage";
+import Navbar from "./pages/Navbar";
 
 function App() {
   return (
     <Router>
       <CartProvider>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductDetail />} />
